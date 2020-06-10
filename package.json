@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "This is my data for my server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "example",
+    "data",
+    "server"
+  ],
+  "author": "Aditya Srivastava",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.8",
+    "mongose": "0.0.2-security",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.4"
+  }
+}

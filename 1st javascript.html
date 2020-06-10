@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<title>Adding two numbers</title>
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    
+	</script>
+</head>
+
+<body>
+	<h1>Concatenate/Sum up two strings/numbers</h1>
+	<br>
+
+	<!--label style="color: red;">
+		<h5>Currently not Adding decimal numbers</h5-->
+	</label>
+	<div>
+		<label>
+			<h4>Enter first value</h4>
+		</label>
+
+		<input type="text" id="txb1" />
+		<br><br>
+
+		<label>
+			<h4>Enter second value</h4>
+		</label>
+		<input type="text" id="txb2" />
+		<br><br>
+		<button id="btn1" type="text">Add</button>
+		<br><br>
+		<label id="mc" style="visibility: hidden;">
+			<h2>Result : </h2>
+		</label>
+	</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"></script>
+<script src="jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#btn1").click(function () {
+			var a = $("#txb1").val();
+			var b = $("#txb2").val();
+			var c;
+
+			c = parseInt(a) + parseInt(b);
+			var regx1 = /^[0-9]+.[0-9]+/;
+			var regx2 =/^[0-9]+/;
+			if(regx2.test(a) && regx2.test(b))
+			{
+				if(regx1.test(a) && regx1.test(b) || regx1.test(a) || regx1.test(b))
+				c=parseFloat(a)+parseFloat(b);
+				
+			}
+			if (isNaN(c)) {
+				c = a + b;
+			}
+			$("#mc").html("<h2>Result : " + c + "</h2>");
+			$('#mc').css('visibility', 'visible');
+		});
+	});
+</script>
+
+</html>
